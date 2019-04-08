@@ -8,10 +8,6 @@
             [aleph.http :as http]))
 
 
-(defn extension [filename]
-  (last (str/split filename #"\.")))
-
-
 (defn static [{:keys [uri] :as req}]
   (or (some-> (str/replace uri #"^/static/" "")
               (response/resource-response)
