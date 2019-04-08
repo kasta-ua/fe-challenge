@@ -12,10 +12,21 @@
                  [mount "0.1.16"]
                  [nrepl "0.6.0"]
 
+                 [org.clojure/clojurescript "1.10.520"
+                  :exclusions [org.mozilla/rhino]]
+                 [rum "0.11.3"]
+
                  [ch.qos.logback/logback-classic "1.2.3"]
                  [org.clojure/tools.logging "0.4.1"]]
 
   :profiles
   {:dev {:source-paths #{"dev"}
+         :resource-paths #{"resources" "target"}
          :dependencies [[org.clojure/tools.namespace "0.3.0-alpha3"]
-                        [cider/cider-nrepl "0.21.1"]]}})
+                        [cider/cider-nrepl "0.21.1"]
+                        [hawk "0.2.11"]
+                        [mrmcc3/libsass-clj "0.1.8"]
+                        [figwheel-sidecar "0.5.18"
+                         :exclusions [org.clojure/clojurescript
+                                      org.apache.maven.wagon/wagon-http
+                                      org.clojure/tools.nrepl]]]}})
