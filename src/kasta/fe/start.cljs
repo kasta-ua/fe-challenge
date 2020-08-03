@@ -4,5 +4,5 @@
 
 
 (figwheel/watch-and-reload
-  :websocket-url (str "ws://" js/location.hostname ":3449/figwheel-ws")
+  :websocket-url (str "ws://" js/location.hostname ":3450/figwheel-ws")
   :jsload-callback (main/trigger-render))

@@ -8,8 +8,8 @@
   (:import java.net.InetSocketAddress))
 
 
-(def HOST "127.0.0.1")
-(def PORT 5000)
+(def HOST "localhost")
+(def PORT 5001)
 
 
 (mount/defstate server

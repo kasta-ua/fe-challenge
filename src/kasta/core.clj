@@ -60,7 +60,8 @@
     {:figwheel-options {:open-file-command "figwheel-open"
                         :css-dirs          ["target"]
                         :validate-config   false
-                        :reload-clj-files  {:clj true :cljc false}}
+                        :reload-clj-files  {:clj true :cljc false}
+                        :server-port       3450}
      :all-builds       [dev-build]
      :build-ids        build-ids})
   (ra/cljs-repl))
